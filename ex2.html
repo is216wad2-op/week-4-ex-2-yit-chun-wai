@@ -11,6 +11,14 @@
 
         /* add CSS code here */
 
+        #div2 {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+            border-radius: 50%;
+
+        }
+
     </style>
 
     
@@ -21,11 +29,27 @@
 
     <div id="div1"></div>
 
-    <button onclick="changeShape()">Make a change!</button>
+    <button onclick="changeshape()">Make a change!</button>
 
     <script>
+        var square = true;
         
        // add code here
+       function changeshape() {
+
+        if (square){
+            var div = document.getElementById("div1");
+            console.log(div)
+            div.id = "div2";
+            square=false;
+
+        } else { //if circle
+            var div = document.getElementById("div2");
+            div.id = "div1";
+            square=true;
+        }
+
+       }
 
     </script>
 
